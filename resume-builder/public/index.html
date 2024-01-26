@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Modern Resume Builder</h1>
+        <div id="themeSelector">
+            <label for="theme">Select Color Theme:</label>
+            <select id="theme" onchange="changeTheme()">
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="ocean">Ocean</option>
+            </select>
+        </div>
+        <form id="resumeForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" rows="4" required></textarea>
+
+            <label for="workExperience">Work Experience:</label>
+            <div id="workExperienceContainer">
+                <!-- Work experience fields will be added dynamically -->
+            </div>
+            <button type="button" onclick="addWorkExperience()">+ Add Work Experience</button>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" rows="4" required></textarea>
+
+            <label for="profileSummary">Profile Summary:</label>
+            <textarea id="profileSummary" name="profileSummary" rows="4" required></textarea>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" accept="image/*">
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+
+        <div id="resumeOutput">
+            <!-- Display generated resume here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <!-- Add these in your HTML file's head section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+
+</body>
+</html>

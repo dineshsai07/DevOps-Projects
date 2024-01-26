@@ -1,0 +1,18 @@
+/* Ocean color theme */
+body {
+    background-color: #006994;
+    color: #fff;
+}
+
+.container {
+    background-color: #0099cc;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+button {
+    background-color: #00bfff;
+}
+
+button:hover {
+    background-color: #0099cc;
+}

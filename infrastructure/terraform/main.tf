@@ -1,6 +1,6 @@
 provider "aws" {
   region = var.region
-  secret_key = 
+  secret_key = lkdsfdsjfs
 }
 
 resource "aws_instance" "master_node" {
